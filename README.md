@@ -1,3 +1,11 @@
+# lookoutconference
+
+Source code for National Interdisciplinary Lookout Conference website
+
+<https://cdil.lib.uidaho.edu/lookoutconference/>
+
+-----------------------
+
 # [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
