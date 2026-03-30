@@ -13,7 +13,7 @@ excerpt: "Apply to present or register to attend, today!"
 permalink: "/participate/"
 ---
 
-<a href="https://lookoutconference.github.io/Booklet_Nilc.pdf" class="btn btn--primary btn--large">Check out last year's Program!</a>
+<a href="../Booklet_Nilc2026.pdf" class="btn btn--primary btn--large">Check out Our Program for 2026!</a>
 
 # **PARTICIPATE**
 
