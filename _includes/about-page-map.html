@@ -1,0 +1,87 @@
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+<div id="map" style="height: 500px; margin: 20px 0;"></div>
+
+<script>
+    // Initialize the map centered on Moscow, Idaho
+    var map = L.map('map').setView([46.7297, -117.0004], 14);
+    
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(map);
+    
+    // Define locations with coordinates
+    var locations = [
+        {
+            name: "Bruce Pitman Center/Student Union",
+            coords: [46.728877587053965, -117.0073231997922],
+            type: "campus",
+            link: "https://maps.app.goo.gl/e6tVTxiztGcv6Bp4A"
+        },
+        {
+            name: "Integrated Research and Innovation Center (IRIC)",
+            coords: [46.728965836136396, -117.01313822895872],
+            type: "campus",
+            link: "https://maps.app.goo.gl/uSpuG9gRkV2VdDso9"
+        },
+        {
+            name: "Hunga Dunga Brewing",
+            coords: [46.737249474341596, -117.00319289675785],
+            type: "offcampus",
+            link: "https://maps.app.goo.gl/9KjpXuhL9QbN14Hd7"
+        },
+        {
+            name: "1912 Center",
+            coords: [46.73302871313421, -116.99656247605516],
+            type: "offcampus",
+            link: "https://maps.app.goo.gl/yA3qR256angNZwVVA"
+        }
+    ];
+    
+    // Create custom icons for different location types
+    var campusIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+    
+    var offCampusIcon = L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+    
+    // Add markers for each location
+    locations.forEach(function(location) {
+        var icon = location.type === 'campus' ? campusIcon : offCampusIcon;
+        var marker = L.marker(location.coords, {icon: icon}).addTo(map);
+        marker.bindPopup('<strong>' + location.name + '</strong><br><a href="' + location.link + '" target="_blank">View on Google Maps</a>');
+    });
+    
+    // Add a legend
+    var legend = L.control({position: 'bottomright'});
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend');
+        div.innerHTML = '<div style="background: white; padding: 10px; border-radius: 5px;">' +
+            '<strong>Location Types</strong><br>' +
+            '<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" width="15" height="24"> Campus Locations<br>' +
+            '<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" width="15" height="24"> Off Campus Locations' +
+            '</div>';
+        return div;
+    };
+    legend.addTo(map);
+</script>

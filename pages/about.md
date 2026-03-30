@@ -16,14 +16,23 @@ permalink: "/about/"
 * <a href="https://www.uidaho.edu/news/feature-stories/fire-lookouts" target="_blank">Michael Decker</a> (College of Graduate Studies - University of Idaho)
 * <a href="https://www.uidaho.edu/caa/programs/architecture/ourpeople/andrea-dutto" target="_blank">Andrea Alberto Dutto</a> (College of Art and Architecture)
 
-
 **Dates:** April 4, 2026
 
 **Time** 8:00 AM PST to 7:00 PM PST
 
+**Program:** <a href="../Booklet_Nilc2026.pdf" class="btn btn-sm btn-info">2026 Program</a>
+
 **Location:** <a href="https://www.uidaho.edu/">University of Idaho, Moscow Campus</a>, <a href="https://www.1912center.org/">The 1912 Center in downtown Moscow</a>, and <a href="https://www.hungadungabrewing.com/">Hunga Dunga Brewing</a>. 
 
-**Program:** A formal program will be displayed here once speakers have been finalized in mid-February. 
+- Campus Locations: 
+  - Opening events are in the Vandal Ballroom, which is in the [Bruce Pitman Center/Student Union](https://maps.app.goo.gl/e6tVTxiztGcv6Bp4A)
+  - Other campus events will be held in our [Integrated Research and Innovation Center (IRIC)](https://maps.app.goo.gl/uSpuG9gRkV2VdDso9) 
+
+- Off Campus Locations: 
+  - [Hunga Dunga Brewing](https://maps.app.goo.gl/9KjpXuhL9QbN14Hd7) 
+  - [1912 Center](https://maps.app.goo.gl/yA3qR256angNZwVVA) 
+
+{% include about-page-map.html %}
 
 
 ## **Important Dates**
