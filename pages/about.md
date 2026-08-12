@@ -16,7 +16,7 @@ permalink: "/about/"
 * <a href="https://www.uidaho.edu/news/feature-stories/fire-lookouts" target="_blank">Michael Decker</a> (College of Graduate Studies - University of Idaho)
 * <a href="https://www.uidaho.edu/caa/programs/architecture/ourpeople/andrea-dutto" target="_blank">Andrea Alberto Dutto</a> (College of Art and Architecture)
 
-**Dates:** April 4, 2026
+**Dates:** March 20, 2027
 
 **Time** 8:00 AM PST to 7:00 PM PST
 
@@ -67,7 +67,7 @@ In the spirit of interdisciplinarity, we welcome submissions and participation f
 
 ### **Location and Mission**
 
-The conference will take place on **April 4, 2026, at the University of Idaho in Moscow, Idaho**.
+The conference will take place on **March 20, 2027, at the University of Idaho in Moscow, Idaho**.
 
 Idaho is a fitting location for NILC 2026, as it was once home to more active fire lookouts than any other state—and therefore, the world. Our primary aim is to bring together diverse perspectives and disciplines to help shape the future of fire lookout towers, which remain integral to fire management policies in Idaho and across the American West.
 

@@ -57,7 +57,7 @@ The conference offers a **limited number of remote presentations (Zoom)**. Those
 
 ### 2. Attend the Conference
 
-Join us for the full conference experience on **Saturday, April 4th**, where you can engage with the latest research and network with fellow enthusiasts.
+Join us for the full conference experience on **Saturday, March 20th**, where you can engage with the latest research and network with fellow enthusiasts.
 
 #### **Full Conference Access Includes:**
 
