@@ -24,3 +24,5 @@ Lookouts, published by the University of Idaho Press, is the first journal devot
 **Issue 1:**
 
 This first issue seeks to gather essays that trace the historical emergence of lookouts as a proxy for forest management. Its close engagement with the American fire lookout tradition stems from the 1st National Interdisciplinary Lookout Conference, held at the University of Idaho in April 2024. The contributors represent a wide range of perspectives on the subject, including historians, enthusiasts, practitioners, organizers, and academics. Their essays address the past, present, and future of the fire lookout, and together they reflect the breadth of the lookout community.
+
+[View the first issue!](https://journals.lib.uidaho.edu/index.php/lookouts/issue/view/1){: .btn .btn--info .btn--large}
