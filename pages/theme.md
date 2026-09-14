@@ -12,7 +12,7 @@ excerpt: "2026 Theme: Lookouts and the Wilderness"
 permalink: "theme/"
 ---
 
-## Conference Theme: Lookouts and the Wilderness
+## Conference Theme: Beyond the Smoke: 
 
 Description:
 Fire lookouts were originally built for a single purpose: to spot smokes and suppress wildfires. But a structure built to watch for one thing rarely stays confined to that purpose. Over a century, these structures have become something their builders never quite intended — staging points for backcountry search and rescue, seasonal homes for writers and artists seeking silence, informal weather and wildlife observation posts, historic landmarks kept alive by volunteers and preservation groups, and, for many who have spent a season in one, something closer to a spiritual practice than a job.
