@@ -50,9 +50,11 @@ permalink: "/about/"
 
 The **National Interdisciplinary Lookout Conference (NILC)** invites abstracts and proposals for its second annual conference.
 
-### **2026 Theme: “Lookouts and the Wilderness”**
+### **2026 Theme: “Beyond the Smoke: How Fire Lookouts Have Evolved New Purposes”**
 
-This year’s theme explores the fire lookout and Wilderness as mutual concepts, examining how they are connected and relate to one another. We will investigate the mutual infrastructures and relationships that these concepts create in both humans and human institutions.
+Fire lookouts were originally built for a single purpose: to spot smokes and suppress wildfires. But a structure built to watch for one thing rarely stays confined to that purpose, and over the last century, these structures have become something their builders never quite intended — staging points for backcountry search and rescue, seasonal retreats for writers and artists seeking silence, informal weather and wildlife observation posts, historic landmarks kept alive by volunteers and preservation groups, and, for many who have spent a season in one, something closer to a spiritual practice than a job.
+
+Beyond the Smoke asks what happens when a tool for detection becomes a tool for ... something else — when the act of watching, sustained long enough, turns outward into stewardship and inward into meaning. This year's conference invites presentations, panels, and conversations that follow the fire lookout past its original mandate: into rescue and resilience work, into literature and art, into architecture and preservation, into ecology and land management, and into whatever else a life spent watching the landscape entails. We are always interested in presentations that discuss how the fire lookout’s original purpose of detecting fires has endured despite technological advances in GIS and remote sensing. We ask that presenters discussing fire watching acknowledge the tension with newer technology and how human staffed observation points have adapted to continue fire watching over the years.
 
 ### **Who Should Attend?**
 
