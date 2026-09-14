@@ -9,7 +9,6 @@ header:
   # cta_url: "https://uidaho.co1.qualtrics.com/jfe/form/SV_eLQjthbshmz3bNz"
   # cta2_label: "Washington State University Applicants"
   # cta2_url: "https://wsu.co1.qualtrics.com/jfe/form/SV_07ioTAKauWCC2X3"
-excerpt: " "
 permalink: "/proceedings/"
 ---
 
