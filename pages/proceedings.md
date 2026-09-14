@@ -3,7 +3,7 @@ layout: splash
 author_profile: true
 header:
   overlay_color: "#000"
-  overlay_filter: "0.1"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/lookouts_logo.png
   # cta_label: "University of Idaho Applicants"
   # cta_url: "https://uidaho.co1.qualtrics.com/jfe/form/SV_eLQjthbshmz3bNz"
