@@ -14,48 +14,38 @@ permalink: "theme/"
 
 ## Conference Theme: Lookouts and the Wilderness
 
-This year’s theme, **“Lookouts and the Wilderness,”** explores the complex relationship between fire lookouts and federally designated Wilderness areas, as well as the concept of "wilderness" itself. We welcome presentations about fire lookouts in both federally designated Wilderness and also places that have a "wild" character. 
+Description:
+Fire lookouts were originally built for a single purpose: to spot smokes and suppress wildfires. But a structure built to watch for one thing rarely stays confined to that purpose. Over a century, these structures have become something their builders never quite intended — staging points for backcountry search and rescue, seasonal homes for writers and artists seeking silence, informal weather and wildlife observation posts, historic landmarks kept alive by volunteers and preservation groups, and, for many who have spent a season in one, something closer to a spiritual practice than a job.
+Beyond the Smoke asks what happens when a tool for detection becomes a tool for reflection — when the act of watching, sustained long enough, turns outward into stewardship and inward into meaning. This year's conference invites presentations, panels, and conversations that follow the fire lookout past its original mandate: into rescue and resilience work, into literature and art, into architecture and preservation, into ecology and land management, and into whatever else a life spent watching the landscape entails. We are always interested in presentations that discuss how the fire lookout’s original purpose of detecting fires has endured despite technological advances in GIS and remote sensing. We ask that presenters discussing fire watching acknowledge the tension with newer technology and how human staffed observation points have adapted to continue fire watching over the years. 
+
+
 
 ---
 
-### 1. Fire Lookouts *in* the (w)ilderness and the (W)ilderness
+### 1. Fire Lookouts Out of Context
 
-We seek presentations that examine fire lookouts located within wild spaces of all kinds.
+Many fire lookout enthusiast have obtained out of commission towers. We would be interested in learning about as many "back yard" fire lookouts as possible 
 
-* **Lookouts *in* the Wilderness:**
-    * Stories about staffing remote wilderness lookouts or discovering abandoned sites.
-    * The feelings of wildness these structures inspire.
-    * The meaning of wilderness in the context of lookouts.
-    * The debate on whether they should be allowed in Wilderness areas. We are interested in getting into the weeds on this debate!
 
-* **Fire Lookouts *Adjacent* to Wilderness**
+### 2. Fire Lookouts as Recreational Hotspots
 
-    * Some lookouts are intentionally placed adjacent to official Wilderness areas to monitor them.
-    * The role of lookouts in "Wilderness fire monitoring."
-    * Wilderness fire policy as it relates to the space called the **Wildland Urban Interface (WUI)**.
+Without a doubt on of the fastest emerging uses of fire lookouts is for recreational purposes. We are interested in hearing from recreationists, non-profits and other groups who maintain structures for historical or recreation purposes, or private owners who have renovated fire lookouts for recreation purposes.  
 
-### 3. Lookouts and the Wilderness of the Mind
+### 4. Lookouts and Social Media
 
-Roderick Frazier Nash published his seminal Wilderness text, *Wilderness and the American Mind*, in the 1970s, establishing that Wilderness is both a physical space and a human concept. The fire lookout, too, exists in both spaces.
+A number of highly popular social media accounts related to fire lookouts have emerged in recent years. We are interested in hearing from social media curators who have input on the following:
 
-* Lookouts were built for official purposes—watching over valuable timber and monitoring fire.
-* However, placing a person on a mountaintop often inspires a **"wilderness of the mind"**: the human mind runs wild, starting books, championing the environment, and connecting to nature.
-* This theme focuses on the internal, conceptual space of fire lookouts that occurs within the human mind.
+1) How to grow a following around lookouts
+2) What information the public is most interested seeing in fire lookout content
+3) The pressures of social media use on backcountry and front country lookouts
+4) The future of lookouts broadly in American or international culture
 
-### 4. Lookouts and a Wilderness Quality
+### 5. Lookouts as non-fire watching observation posts
 
-This theme explores how lookouts might help maintain or even **enhance the wilderness experience**.
+We understand that certain research groups have begun utilizing fire lookouts as remote posts for wild life observation, weather monitoring (an extension of one of its original purposes!), and other non-fire watching activities. We would be interested in hearing about the myriad observational purposes the fire lookout has adopted as a mountain top vantage. 
 
-* Some may argue that the architecture of the lookout is part of the larger architecture of the Wilderness.
-* This session may act as a counter-argument to lookout purism, which often rejects the lookout structure within Wilderness.
-* We welcome discussions on how Wilderness has evolved and how new adaptations (like one that emphasizes the human architecture of Wilderness) may be necessary.
+### 6. Lookouts as continued fire detection and suppression structrues
 
-### 5. Lookouts as Structure and Other Wilderness Networks
-
-This session is all about the nuts and bolts of lookouts.
-
-* **Structure and Restoration:** We want to hear about Wilderness and rural structure building from experts who have constructed or restored lookouts.
-* **The Detection System:** We are also interested in hearing about the broader network that lookouts are a part of (e.g., ranger stations, dispatch networks, fire crews, or pilots).
-* The lookout structure and its network is an impressive act that takes tremendous technical **knowledge** and a unified theory of cooperation. This session can include how lookouts are built, preserved, and how they interact within a broader communication system.
+We are still very interested in hearing presentations on the persistence of fire lookouts as tools for fire prevention as used by agencies like the Forest Service, Bureau of Land Management, Department of Lands, National Park Service, and Private Logging and land use companies. We ask that presenters acknowledge the tension between continued use and competing technologies or budgetary considerations. If fire watching has remained the primary function, *how* has it done so. 
 
 Click <a href="https://lookoutconference.github.io/participate/">here</a> to submit an abstract or register as an attendee. 
