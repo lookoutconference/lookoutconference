@@ -4,7 +4,7 @@ author_profile: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /assets/images/chicken-peak.png
+  overlay_image: /assets/images/spot_at_night.jpg
   actions:
   - label: "Present or attend as a guest. Photo by Mark Moak"
     url: "participate/"
