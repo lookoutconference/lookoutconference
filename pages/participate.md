@@ -13,7 +13,7 @@ excerpt: "Apply to present or register to attend, today!"
 permalink: "/participate/"
 ---
 
-<a href="../Booklet_Nilc2026.pdf" class="btn btn--primary btn--large">Check out Our Program for 2026!</a>
+<a href="../Booklet_Nilc2026.pdf" class="btn btn--primary btn--large">Check out Our Program from 2026!</a>
 
 # **PARTICIPATE**
 
@@ -53,8 +53,6 @@ We understand that certain research groups have begun utilizing fire lookouts as
 ### 6. Lookouts as continued fire detection and suppression structrues
 
 We are still very interested in hearing presentations on the persistence of fire lookouts as tools for fire prevention as used by agencies like the Forest Service, Bureau of Land Management, Department of Lands, National Park Service, and Private Logging and land use companies. We ask that presenters acknowledge the tension between continued use and competing technologies or budgetary considerations. If fire watching has remained the primary function, *how* has it done so. 
-
-Click <a href="https://lookoutconference.github.io/participate/">here</a> to submit an abstract or register as an attendee. 
 
 #### **Instructions for Submission:**
 
