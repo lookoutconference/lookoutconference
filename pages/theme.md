@@ -8,7 +8,7 @@ header:
   actions:
   - label: "Present or attend as a guest"
     url: "participate/"
-excerpt: "2026 Theme: Lookouts and the Wilderness"
+excerpt: "2027 Theme: Beyond the Smoke"
 permalink: "theme/"
 ---
 
