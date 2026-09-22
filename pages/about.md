@@ -75,6 +75,6 @@ Idaho is a fitting location for NILC 2026, as it was once home to more active fi
 
 ### **Schedule**
 
-A full conference schedule will be posted in late-February 2026 once presentation submissions are finalized.
+A full conference schedule will be posted in late-February 2027 once presentation submissions are finalized.
 [More on the Conference Theme](../theme/){: .btn .btn--info .btn--large}
 
