@@ -6,7 +6,7 @@ header:
   overlay_filter: "0.2"
   overlay_image: /assets/images/chicken-peak.png
   actions:
-  - label: "Present or attend as a guest"
+  - label: "Present or attend as a guest. Photo by Mark Moak"
     url: "participate/"
 excerpt: "2027 Theme: Beyond the Smoke"
 permalink: "theme/"
