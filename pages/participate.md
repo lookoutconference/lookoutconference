@@ -91,6 +91,5 @@ Join us for the full conference experience on **Saturday, March 20th**, where yo
 **Important Dates:**
 
 * **Lunch/Badge Guarantee:** Please register by **March 10th** to ensure we can provide you with lunch and dinner and a name badge.
-* **University of Idaho Community:** All students, employees, and faculty of the University of Idaho may attend the conference at **no cost**.
 
 [Register as an attendee](https://futurevandals.uidaho.edu/register/?id=6ea32880-b5eb-4529-83de-434ee4a6c9cf){: .btn .btn--info .btn--large}
