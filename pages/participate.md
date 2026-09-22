@@ -88,8 +88,5 @@ Join us for the full conference experience on **Saturday, March 20th**, where yo
 | **Full Attendee Registration** | **$75** if Registered before Jan 1. $90 after Jan. 1 | Includes all conference events, lunch, and dinner. |
 | **Optional NILC T-shirt** | **$30** | Must register by **Jan 15th** to guarantee a shirt. |
 
-**Important Dates:**
-
-* **Lunch/Badge Guarantee:** Please register by **March 10th** to ensure we can provide you with lunch and dinner and a name badge.
 
 [Register as an attendee](https://futurevandals.uidaho.edu/register/?id=6ea32880-b5eb-4529-83de-434ee4a6c9cf){: .btn .btn--info .btn--large}
