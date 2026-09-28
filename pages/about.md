@@ -37,9 +37,9 @@ permalink: "/about/"
 
 ## **Important Dates**
 
-*Abstract Submission Deadline*: 02/01/2026
+*Abstract Submission Deadline*: 02/01/2027
 
-*Abstract Decisions*: 02/20/2026
+*Abstract Decisions*: 02/20/2027
 
 
 [Please submit questions here](https://futurevandals.uidaho.edu/register/?id=c6162e10-cb08-4c3e-83fd-08a7fe968943){: .btn .btn--info .btn--large}
@@ -48,9 +48,9 @@ permalink: "/about/"
 
 ## About the Conference & Theme
 
-The **National Interdisciplinary Lookout Conference (NILC)** invites abstracts and proposals for its second annual conference.
+The **National Interdisciplinary Lookout Conference (NILC)** invites abstracts and proposals for its third annual conference.
 
-### **2026 Theme: “Beyond the Smoke: How Fire Lookouts Have Evolved New Purposes”**
+### **2027 Theme: “Beyond the Smoke: How Fire Lookouts Have Evolved New Purposes”**
 
 Fire lookouts were originally built for a single purpose: to spot smokes and suppress wildfires. But a structure built to watch for one thing rarely stays confined to that purpose, and over the last century, these structures have become something their builders never quite intended — staging points for backcountry search and rescue, seasonal retreats for writers and artists seeking silence, informal weather and wildlife observation posts, historic landmarks kept alive by volunteers and preservation groups, and, for many who have spent a season in one, something closer to a spiritual practice than a job.
 
@@ -71,7 +71,7 @@ In the spirit of interdisciplinarity, we welcome submissions and participation f
 
 The conference will take place on **March 20, 2027, at the University of Idaho in Moscow, Idaho**.
 
-Idaho is a fitting location for NILC 2026, as it was once home to more active fire lookouts than any other state—and therefore, the world. Our primary aim is to bring together diverse perspectives and disciplines to help shape the future of fire lookout towers, which remain integral to fire management policies in Idaho and across the American West.
+Idaho is a fitting location for NILC 2027, as it was once home to more active fire lookouts than any other state—and therefore, the world. Our primary aim is to bring together diverse perspectives and disciplines to help shape the future of fire lookout towers, which remain integral to fire management policies in Idaho and across the American West.
 
 ### **Schedule**
 
