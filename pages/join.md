@@ -26,7 +26,7 @@ Moscow is conveniently located near the Pullman Moscow Airport (Airport Informat
 
 ## **Parking**
 
-Parking will be included with your registration. A printable pass will be emailed to you prior to your arrival.  
+Parking is free on Saturdays on the U of I campus. 
 
 ## **Local Hotels**
 
