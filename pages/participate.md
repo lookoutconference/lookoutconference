@@ -77,8 +77,8 @@ Join us for the full conference experience on **Saturday, March 20th**, where yo
 #### **Full Conference Access Includes:**
 
 * **All Presentations:** Access to presentations and panel discussions.
-* **Keynote Speaker:** Attendance at the featured keynote address.
-* **Networking Event:** Participation in the Saturday evening social at a local community hall, a perfect opportunity to meet others working in the fire lookout community.
+* **Keynote Speaker:** Attendance at the featured keynote, Don Scheese.
+* **Dinner Banquet:** Participation in the Saturday evening social at a local community hall with have a catered dinner, a perfect opportunity to meet others working and recreating in the fire lookout community.
 * **Meals:** A light lunch and dinner are included.
 
 #### **Registration Details**
