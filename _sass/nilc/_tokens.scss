@@ -1,0 +1,47 @@
+/* Tokens
+   ========================================================================== */
+
+:root {
+  // Surfaces: photographic paper, faintly warm
+  --paper: oklch(97% 0.008 85);
+  --paper-2: oklch(93.5% 0.012 80);
+
+  // Ink
+  --ink: oklch(23% 0.015 70);
+  --ink-2: oklch(45% 0.015 70);
+  --rule: oklch(80% 0.01 80);
+
+  // Accent: the lamplit cab window in the Spot night photo. Use sparingly.
+  --ember: oklch(50% 0.14 45);
+  --ember-deep: oklch(42% 0.12 45);
+
+  // Text on photographs
+  --on-photo: oklch(97% 0.008 85);
+  --scrim: oklch(16% 0.02 60);
+
+  // Type
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Petrona", Georgia, serif;
+  --measure: 34rem; // ~70 characters of Petrona at body size
+
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: clamp(1.25rem, 1.15rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.55rem, 1.35rem + 0.9vw, 1.95rem);
+  --step-3: clamp(2rem, 1.6rem + 1.8vw, 2.9rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.2vw, 4.4rem);
+
+  // Space (4pt scale)
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1); // ease-out-quint
+}

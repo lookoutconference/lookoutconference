@@ -1,0 +1,187 @@
+/* Page layout
+   One left-aligned reading column. On wide screens a margin column to its
+   left carries page wayfinding (key facts, "on this page"). Every page keeps
+   the same left edge whether or not it has an aside.
+   ========================================================================== */
+
+$nilc-aside: 13rem;
+
+#main.nilc-main {
+  max-width: calc(#{$nilc-aside} + var(--measure) + var(--space-3xl) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding: var(--space-2xl) var(--gutter) var(--space-4xl);
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure));
+  row-gap: var(--space-xl);
+  animation: none;
+
+  @media (min-width: 64em) {
+    grid-template-columns: #{$nilc-aside} minmax(0, var(--measure));
+    column-gap: var(--space-3xl);
+
+    > .nilc-body {
+      grid-column: 2;
+    }
+  }
+
+  // Undo Minimal Mistakes' float + right-sidebar reservations
+  .archive,
+  .splash,
+  .page__content {
+    float: none;
+    width: auto;
+    padding-inline-end: 0;
+    margin: 0;
+  }
+
+  .page__content > :first-child,
+  .archive > :first-child {
+    margin-top: 0;
+  }
+}
+
+/* Page aside
+   ========================================================================== */
+
+.page-aside {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  line-height: 1.35;
+  color: var(--ink-2);
+
+  @media (min-width: 64em) {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: var(--space-xl);
+    max-height: calc(100vh - 2 * var(--space-xl));
+    overflow-y: auto;
+  }
+
+  .label {
+    display: block;
+    margin: 0 0 var(--space-xs);
+    font-size: 0.75rem;
+  }
+
+  section + section {
+    margin-top: var(--space-xl);
+  }
+}
+
+// Key facts: a compact ledger
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2xs) var(--space-sm);
+  font-variant-numeric: tabular-nums;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--ink);
+
+  dt {
+    font-weight: 600;
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding-top: 0.15em;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  @media (min-width: 64em) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    dd + dt {
+      margin-top: var(--space-sm);
+    }
+  }
+}
+
+// On this page
+.page-index {
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-sm) 0 0;
+    border-top: 1px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+
+    @media (min-width: 64em) {
+      display: block;
+    }
+  }
+
+  li {
+    margin: 0;
+    @media (min-width: 64em) {
+      margin: 0 0 var(--space-xs);
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: var(--ink-2);
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--ember);
+    }
+
+    // Current section: a tick in the margin
+    @media (min-width: 64em) {
+      padding-inline-start: var(--space-md);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0.6em;
+        width: 8px;
+        height: 1px;
+        background: var(--rule);
+        transition: width 0.25s var(--ease-out), background-color 0.25s var(--ease-out);
+      }
+
+      &[aria-current="true"] {
+        color: var(--ink);
+
+        &::before {
+          width: 12px;
+          background: var(--ember);
+        }
+      }
+    }
+  }
+}
+
+/* Utilities
+   ========================================================================== */
+
+.embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: var(--space-lg) 0;
+  background: var(--paper-2);
+
+  iframe, #map {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+  }
+}

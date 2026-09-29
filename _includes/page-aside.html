@@ -1,0 +1,60 @@
+{% comment %}
+  Margin column for wayfinding. Enable per page:
+    aside: true         "On this page", built from the page's <h2> headings
+    aside_facts: true   the current conference's key facts (_data/conference.yml)
+  Pass the rendered page body as include.content.
+{% endcomment %}
+
+{% assign c = site.data.conference %}
+{% assign h2s = include.content | split: '<h2 id="' %}
+
+<aside class="page-aside" aria-label="Page navigation">
+  {% if page.aside_facts %}
+  <section>
+    <span class="label">NILC {{ c.year }}</span>
+    <dl class="facts">
+      <dt>Date</dt><dd>{{ c.weekday }}, {{ c.date }}</dd>
+      <dt>Time</dt><dd>{{ c.time }}</dd>
+      <dt>Place</dt><dd>{{ c.place }}</dd>
+      {% for d in c.deadlines %}
+      <dt>{{ d.label }}</dt><dd>{{ d.date }}</dd>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if h2s.size > 2 %}
+  <section class="page-index">
+    <span class="label" id="page-index-label">On this page</span>
+    <ol aria-labelledby="page-index-label">
+      {% for part in h2s offset: 1 %}
+        {% assign id = part | split: '"' | first %}
+        {% assign inner = part | split: '</h2>' | first %}
+        {% assign open_tag = inner | split: '>' | first | append: '>' %}
+        {% assign heading = inner | remove_first: open_tag | strip_html | strip %}
+        <li><a href="#{{ id }}">{{ heading }}</a></li>
+      {% endfor %}
+    </ol>
+  </section>
+  <script>
+    (function () {
+      var links = document.querySelectorAll('.page-index a');
+      if (!('IntersectionObserver' in window) || !links.length) return;
+      var byId = {};
+      links.forEach(function (a) { byId[decodeURIComponent(a.hash.slice(1))] = a; });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          var a = byId[e.target.id];
+          if (a) a.setAttribute('aria-current', 'true');
+        });
+      }, { rootMargin: '0px 0px -70% 0px' });
+      Object.keys(byId).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) io.observe(el);
+      });
+    })();
+  </script>
+  {% endif %}
+</aside>

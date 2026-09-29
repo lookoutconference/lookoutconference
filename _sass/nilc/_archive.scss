@@ -1,0 +1,261 @@
+/* Archive: year index and session pages
+   ========================================================================== */
+
+// Year heading with a labelled scale above it
+.archive-year {
+  margin-top: var(--space-3xl);
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  .azimuth-scale {
+    margin: 0 0 var(--space-sm);
+  }
+
+  > h2 {
+    margin-top: 0;
+    padding-bottom: 0;
+    background: none;
+    font-size: var(--step-3);
+  }
+}
+
+.archive-year__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-lg);
+  margin: 0 0 var(--space-lg);
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step-0);
+  font-weight: 500;
+  color: var(--ink-2);
+
+  a {
+    font-weight: 650;
+  }
+}
+
+// Numbered session list, ruled like a program
+.sessions,
+.page__content .sessions {
+  list-style: none;
+  counter-reset: session;
+  margin: var(--space-xl) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.session {
+  counter-increment: session;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  column-gap: var(--space-sm);
+  margin: 0;
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--rule);
+
+  &::before {
+    content: counter(session, decimal-leading-zero);
+    font-family: var(--font-display);
+    font-stretch: 87.5%;
+    font-weight: 700;
+    font-size: var(--step-1);
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-2);
+  }
+
+  > * {
+    grid-column: 2;
+  }
+}
+
+.page__content .session__title {
+  margin: 0;
+  font-size: var(--step-1);
+  line-height: 1.2;
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--ember);
+      text-decoration: underline;
+    }
+  }
+}
+
+.session__chair {
+  margin: var(--space-2xs) 0 0;
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  color: var(--ink-2);
+}
+
+.page__content .session__talks {
+  list-style: none;
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  font-size: 0.95em;
+  line-height: 1.45;
+
+  li {
+    margin: 0 0 var(--space-2xs);
+  }
+
+  .speaker {
+    font-weight: 650;
+  }
+}
+
+/* Session page */
+
+.talk__back {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  a::before {
+    content: "← ";
+  }
+}
+
+.talk {
+  padding-bottom: var(--space-2xl);
+
+  & + & {
+    padding-top: var(--space-xs);
+  }
+
+  .embed {
+    margin: var(--space-lg) 0;
+  }
+}
+
+.page__content .talk__title {
+  font-size: var(--step-2);
+}
+
+.talk__byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  color: var(--ink-2);
+
+  .talk__speaker {
+    font-weight: 700;
+    color: var(--ink);
+  }
+}
+
+.talk__topics {
+  font-size: var(--step--1);
+  color: var(--ink-2);
+
+  .label {
+    margin-inline-end: var(--space-xs);
+    font-size: 0.75rem;
+  }
+}
+
+.talk__link {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+// Share buttons: quiet outlines instead of brand-colored blocks
+.page__share {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--rule);
+
+  .page__share-title {
+    font-family: var(--font-display);
+    font-stretch: 87.5%;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+
+  .btn,
+  .btn:visited {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+
+    &:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+  }
+}
+
+/* Home page: three paths
+   ========================================================================== */
+
+.paths,
+.page__content .paths {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.path {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2xs) var(--space-xl);
+  margin: 0;
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--rule);
+
+  @media (min-width: 40em) {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+
+  h2, .page__content & h2 {
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: var(--step-1);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .path__go {
+    margin-top: var(--space-xs);
+    font-family: var(--font-display);
+    font-stretch: 87.5%;
+    font-size: var(--step--1);
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 40em) {
+    > :not(h2) {
+      grid-column: 2;
+    }
+  }
+}
+
+.sponsors {
+  margin-top: var(--space-2xl);
+  font-size: var(--step--1);
+  color: var(--ink-2);
+}

@@ -1,0 +1,41 @@
+/* Azimuth scale
+   The 0–360° tick rule printed along the edges of Osborne firefinder
+   panoramas. Minor tick every 8px, major every 40px, on a 1px baseline.
+   ========================================================================== */
+
+@mixin azimuth($color: var(--ink), $height: 12px) {
+  background:
+    repeating-linear-gradient(to right, #{$color} 0 1px, transparent 1px 40px) left bottom / 100% #{$height} no-repeat,
+    repeating-linear-gradient(to right, #{$color} 0 1px, transparent 1px 8px) left bottom / 100% calc(#{$height} * 0.42) no-repeat,
+    linear-gradient(#{$color}, #{$color}) left bottom / 100% 1px no-repeat;
+}
+
+.azimuth {
+  display: block;
+  height: 12px;
+  border: 0;
+  @include azimuth;
+}
+
+// Labelled variant (_includes/azimuth.html draws the SVG)
+.azimuth-scale {
+  display: block;
+  overflow: hidden;
+  color: var(--ink);
+  margin-block: var(--space-xl) var(--space-lg);
+
+  svg {
+    display: block;
+    height: 30px;
+    width: auto;
+    max-width: none;
+  }
+
+  text {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-stretch: 87.5%;
+    font-variant-numeric: tabular-nums;
+    fill: var(--ink-2);
+  }
+}

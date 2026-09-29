@@ -5,5 +5,28 @@ search: false
 
 @charset "utf-8";
 
+// NILC theme values fed to Minimal Mistakes (hex equivalents of the OKLCH
+// tokens in _sass/nilc/_tokens.scss, since MM runs Sass color math on them)
+$background-color: #f8f5ef;
+$text-color: #221c15;
+$muted-text-color: #5b544c;
+$border-color: #c1bdb7;
+$primary-color: #221c15;
+$link-color: #a14206;
+$link-color-hover: #803200;
+$link-color-visited: #a14206;
+$masthead-link-color: #221c15;
+$masthead-link-color-hover: #a14206;
+$footer-background-color: #eee9e1;
+$code-background-color: #eee9e1;
+$focus-color: #a14206;
+$info-color: #5b544c;
+
+$serif: "Petrona", Georgia, serif;
+$sans-serif: "Archivo", "Helvetica Neue", Arial, sans-serif;
+$global-font-family: $serif;
+$header-font-family: $sans-serif;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "nilc"; // NILC refresh

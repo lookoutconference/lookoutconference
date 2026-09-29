@@ -1,0 +1,28 @@
+{% comment %}
+  Labelled azimuth scale, after the Osborne firefinder panoramas.
+  1° = 6px; majors every 10° are numbered. Clipped to its container.
+    include.start  starting bearing (default 300)
+    include.span   degrees drawn (default 180)
+{% endcomment %}
+{% assign start = include.start | default: 300 %}
+{% assign span = include.span | default: 180 %}
+{% assign width = span | times: 6 %}
+<span class="azimuth-scale" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="{{ width }}" height="30" viewBox="0 0 {{ width }} 30">
+    <line x1="0" y1="29.5" x2="{{ width }}" y2="29.5" stroke="currentColor" stroke-width="1"/>
+    {%- for i in (0..span) -%}
+      {%- assign x = i | times: 6 | plus: 0.5 -%}
+      {%- assign deg = start | plus: i | modulo: 360 -%}
+      {%- assign m10 = deg | modulo: 10 -%}
+      {%- assign m5 = deg | modulo: 5 -%}
+      {%- if m10 == 0 -%}
+        <line x1="{{ x }}" y1="16" x2="{{ x }}" y2="30" stroke="currentColor"/>
+        <text x="{{ x | plus: 3 }}" y="12">{{ deg }}</text>
+      {%- elsif m5 == 0 -%}
+        <line x1="{{ x }}" y1="21" x2="{{ x }}" y2="30" stroke="currentColor"/>
+      {%- else -%}
+        <line x1="{{ x }}" y1="25" x2="{{ x }}" y2="30" stroke="currentColor"/>
+      {%- endif -%}
+    {%- endfor -%}
+  </svg>
+</span>
