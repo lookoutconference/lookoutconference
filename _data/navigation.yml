@@ -8,8 +8,6 @@ main:
     url: /participate/
   - title: "Getting Here"
     url: /join/
-  - title: "Lookout Postcards"
-    url: /postcard/
   - title: "Proceedings" 
     url: /proceedings/
   - title: "Conference Board"
