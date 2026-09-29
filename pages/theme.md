@@ -6,7 +6,7 @@ header:
   overlay_filter: "0.2"
   overlay_image: /assets/images/spot_at_night.jpg
   actions:
-  - label: "Present or attend as a guest. Photo by Mark Moak"
+  - label: "Present or attend as a guest."
     url: "participate/"
 excerpt: "2027 Theme: Beyond the Smoke"
 permalink: "theme/"
@@ -48,6 +48,6 @@ We understand that certain research groups have begun utilizing fire lookouts as
 
 We are still very interested in hearing presentations on the persistence of fire lookouts as tools for fire prevention as used by agencies like the Forest Service, Bureau of Land Management, Department of Lands, National Park Service, and Private Logging and land use companies. We ask that presenters acknowledge the tension between continued use and competing technologies or budgetary considerations. If fire watching has remained the primary function, *how* has it done so. 
 
-### 7. If there is another sub-theme that we have not covered, please do not hesitate to submit! We are curious to see the various ways presenters interpret the primary theme. 
+### 7. If there are other sub-themes that we have not covered, please do not hesitate to submit! We are curious to see the various ways presenters interpret the primary theme. 
 
 Click <a href="https://lookoutconference.github.io/participate/">here</a> to submit an abstract or register as an attendee. 
