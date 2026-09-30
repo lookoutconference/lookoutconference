@@ -1,0 +1,311 @@
+/* Type
+   Archivo (semi-condensed) for display and labels, like map lettering.
+   Petrona for reading.
+   ========================================================================== */
+
+// MM scales the root up to 22px on wide screens; that overshoots for a
+// serif text face. Keep the steps modest; --measure (34rem) scales with it.
+html {
+  background-color: var(--paper);
+  font-size: 16px;
+
+  @media (min-width: 48em) {
+    font-size: 17px;
+  }
+
+  @media (min-width: 80em) {
+    font-size: 18px;
+  }
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  color: var(--ink);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+a {
+  color: var(--ember);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+
+  &:hover {
+    color: var(--ember-deep);
+    text-decoration-thickness: 2px;
+  }
+
+  &:visited {
+    color: var(--ember);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
+
+// Short label style used for kickers, nav, facts, metadata
+.label,
+.kicker {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.page__content,
+.archive {
+  font-size: var(--step-0);
+  line-height: 1.6;
+
+  p, li, dl, td {
+    font-size: 1em;
+  }
+
+  // Kramdown turns `## **Heading**` into <h2><strong>; keep weight consistent
+  h1 strong, h2 strong, h3 strong, h4 strong {
+    font-weight: inherit;
+  }
+
+  h1 {
+    font-size: var(--step-3);
+    font-weight: 700;
+    margin: 0 0 var(--space-lg);
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: var(--step-2);
+    font-weight: 650;
+    margin: var(--space-3xl) 0 var(--space-md);
+    padding: 0 0 var(--space-sm);
+    border-bottom: 0;
+    @include azimuth(var(--rule), 8px);
+  }
+
+  h3 {
+    font-size: var(--step-1);
+    font-weight: 650;
+    margin: var(--space-2xl) 0 var(--space-xs);
+  }
+
+  h4 {
+    font-size: var(--step-0);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: var(--space-xl) 0 var(--space-xs);
+  }
+
+  // Heading followed immediately by heading: tighten
+  h1 + h2, h2 + h3, h3 + h4 {
+    margin-top: var(--space-md);
+  }
+
+  p {
+    margin: 0 0 var(--space-md);
+  }
+
+  ul, ol {
+    padding-inline-start: 1.25em;
+    margin: 0 0 var(--space-lg);
+  }
+
+  li {
+    margin-bottom: var(--space-2xs);
+  }
+
+  li::marker {
+    color: var(--ink-2);
+  }
+
+  hr {
+    border: 0;
+    margin: var(--space-2xl) 0;
+    @include azimuth(var(--rule), 10px);
+    height: 10px;
+  }
+
+  strong {
+    font-weight: 650;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+    border-collapse: collapse;
+    border: 0;
+    margin: var(--space-lg) 0 var(--space-xl);
+  }
+
+  th, td {
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 0;
+    border: 0;
+    border-bottom: 1px solid var(--rule);
+    text-align: start;
+    vertical-align: top;
+    background: none;
+  }
+
+  thead th {
+    font-family: var(--font-display);
+    font-stretch: 87.5%;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  tbody tr:nth-child(odd) {
+    background: none;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+}
+
+// Buttons: one visual weight for calls to action, plain links for the rest
+.btn,
+.page__content .btn {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: var(--step--1);
+  line-height: 1.2;
+  border-radius: 0;
+  padding: 0.85em 1.25em;
+  text-decoration: none;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
+
+  &:visited {
+    color: var(--ink);
+  }
+
+  &:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+
+.btn--primary,
+.btn--info,
+.page__content .btn--primary,
+.page__content .btn--info {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+
+  &:visited {
+    color: var(--paper);
+  }
+
+  &:hover {
+    background: var(--ember-deep);
+    border-color: var(--ember-deep);
+    color: var(--paper);
+  }
+}
+
+.btn--large {
+  font-size: var(--step-0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+  }
+}
+
+/* Content components
+   ========================================================================== */
+
+.page__content .lead,
+.archive .lead,
+.home-intro {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: var(--space-xl);
+}
+
+// Sub-themes: numbered in the margin with display numerals
+.subthemes {
+  counter-reset: subtheme;
+  margin: var(--space-lg) 0 var(--space-2xl);
+
+  h3 {
+    counter-increment: subtheme;
+    position: relative;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--rule);
+
+    &::before {
+      content: counter(subtheme, decimal-leading-zero);
+      display: block;
+      margin-bottom: var(--space-2xs);
+      font-size: var(--step--1);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+      color: var(--ember);
+    }
+  }
+
+  h3:first-child {
+    margin-top: 0;
+  }
+}
+
+// People list (board)
+.page__content .people,
+.archive .people {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--ink);
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2xs) var(--space-lg);
+    margin: 0;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+.people__name {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step-1);
+  font-weight: 650;
+}
+
+.people__org {
+  color: var(--ink-2);
+}

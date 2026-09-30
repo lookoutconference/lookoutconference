@@ -1,0 +1,176 @@
+/* Hero
+   Photograph as cover, ink scrim weighted to the bottom where the title
+   sits, azimuth scale along the lower edge. The title aligns with the
+   reading column below it.
+   ========================================================================== */
+
+.hero {
+  --hero-position: center;
+  --hero-veil: 0.15;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(17rem, 40vh, 26rem);
+  color: var(--on-photo);
+  background-color: var(--scrim);
+  background-image:
+    linear-gradient(to top,
+      oklch(16% 0.02 60 / 0.85) 0%,
+      oklch(16% 0.02 60 / 0.35) 45%,
+      oklch(16% 0.02 60 / 0) 75%),
+    linear-gradient(oklch(16% 0.02 60 / var(--hero-veil)), oklch(16% 0.02 60 / var(--hero-veil))),
+    var(--hero-image);
+  background-size: cover;
+  background-position: var(--hero-position);
+  background-repeat: no-repeat;
+
+  // Azimuth scale printed along the bottom edge, as on the panoramas
+  &::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 14px;
+    opacity: 0.7;
+    @include azimuth(var(--on-photo), 14px);
+  }
+
+  &--top {
+    align-items: flex-start;
+    background-image:
+      linear-gradient(to bottom,
+        oklch(16% 0.02 60 / 0.7) 0%,
+        oklch(16% 0.02 60 / 0.25) 45%,
+        oklch(16% 0.02 60 / 0) 70%),
+      linear-gradient(oklch(16% 0.02 60 / var(--hero-veil)), oklch(16% 0.02 60 / var(--hero-veil))),
+      var(--hero-image);
+
+    .hero__inner {
+      padding-top: var(--space-3xl);
+    }
+  }
+
+  &--tall {
+    min-height: min(82vh, 46rem);
+  }
+}
+
+.hero__inner {
+  width: 100%;
+  max-width: calc(13rem + var(--measure) + var(--space-3xl) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding: var(--space-4xl) var(--gutter) var(--space-2xl);
+
+  @media (min-width: 64em) {
+    padding-inline-start: calc(var(--gutter) + 13rem + var(--space-3xl));
+  }
+}
+
+.hero__kicker {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--on-photo);
+}
+
+.hero__title {
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  font-size: var(--step-4);
+  font-weight: 750;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  color: var(--on-photo);
+  text-wrap: balance;
+}
+
+.hero__lead {
+  margin: var(--space-md) 0 0;
+  max-width: 46ch;
+  font-family: var(--font-text);
+  font-size: var(--step-1);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--on-photo);
+
+  a {
+    color: inherit;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-xl) 0 0;
+}
+
+.btn--on-photo,
+.btn--on-photo:visited {
+  color: var(--on-photo);
+  border-color: var(--on-photo);
+  background: oklch(16% 0.02 60 / 0.25);
+
+  &:hover {
+    background: var(--on-photo);
+    color: var(--ink);
+  }
+}
+
+.btn--on-photo-solid,
+.btn--on-photo-solid:visited {
+  background: var(--on-photo);
+  color: var(--ink);
+
+  &:hover {
+    background: var(--paper-2);
+    border-color: var(--paper-2);
+    color: var(--ink);
+  }
+}
+
+.hero__caption {
+  position: absolute;
+  inset: var(--space-sm) var(--space-sm) auto auto;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--on-photo);
+  opacity: 0.8;
+
+  a {
+    color: inherit;
+  }
+}
+
+/* Logo hero: the mark on paper, nothing else (Proceedings)
+   ========================================================================== */
+
+.hero--logo {
+  min-height: 0;
+  color: var(--ink);
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+
+  &::after {
+    display: none;
+  }
+
+  .hero__inner {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
+.hero__logo {
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  mix-blend-mode: multiply; // the PNG has a white ground; let the paper show
+}

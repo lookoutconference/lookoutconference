@@ -1,0 +1,27 @@
+# Facts for the current (upcoming) conference.
+# Update this file for each new edition; About, Participate, the home page,
+# and the About page's key-facts aside all read from it.
+
+edition: "Third"
+year: 2027
+date: "March 20, 2027"
+weekday: "Saturday"
+time: "8:00 AM – 7:00 PM Pacific"
+theme: "Beyond the Smoke"
+theme_subtitle: "How Fire Lookouts Have Evolved New Purposes"
+place: "University of Idaho, Moscow"
+
+deadlines:
+  - label: "Abstracts due"
+    date: "Feb 1, 2027"
+  - label: "Decisions"
+    date: "Feb 20, 2027"
+
+program:
+  label: "2026 program"
+  url: "/Booklet_Nilc2026.pdf"
+
+links:
+  submit: "https://futurevandals.uidaho.edu/register/?id=df43986c-dd45-45ba-9809-6eab38435270"
+  register: "https://futurevandals.uidaho.edu/register/?id=6ea32880-b5eb-4529-83de-434ee4a6c9cf"
+  questions: "https://futurevandals.uidaho.edu/register/?id=c6162e10-cb08-4c3e-83fd-08a7fe968943"

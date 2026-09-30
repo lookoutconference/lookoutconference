@@ -1,17 +1,41 @@
 ---
-layout: home
-author_profile: true
 layout: splash
+title: "National Interdisciplinary Lookout Conference"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
   overlay_image: /assets/images/nilc2025-161.jpg
+  overlay_filter: 0.25
+  size: tall
+  conference: true
   actions:
-    - label: "Learn More"
-      url: "about/"
-    - label: "🔥 Check Out Our Program from 2026!"
-      url: "Booklet_Nilc2026.pdf"
-      class: "btn--warning btn--x-large"
-excerpt: "A conference dedicated to the study of Fire Lookouts in the Human Environment. Sponsored by the University of Idaho's <a href='https://www.uidaho.edu/caa' target='_blank'>College of Art and Architecture</a>, <a href='https://www.uidaho.edu/cogs' target='_blank'>College of Graduate Studies</a>, <a href='https://www.uidaho.edu/cnr'>College of Natural Resources</a>, <a href='https://lib.uidaho.edu/' target='_blank'>Library</a>, and in partnership with the <a href='https://firelookout.org/' target='_blank'>Forest Fire Lookout Association</a>"
+    - label: "Submit an abstract"
+      url: "/participate/#present"
+    - label: "About the conference"
+      url: "/about/"
+excerpt: "A conference dedicated to the study of fire lookouts in the human environment, hosted by the University of Idaho."
 permalink: "/"
 ---
+{% assign c = site.data.conference %}
+
+<p class="home-intro">A one-day conference on fire lookouts in the human environment — their history, architecture, ecology, literature, and future — bringing together scholars, fire managers, restorers, and the people who have spent seasons in the cab.</p>
+
+<ul class="paths">
+  <li class="path">
+    <h2>Present</h2>
+    <p>Abstracts of up to 500 words are due <strong>{{ c.deadlines[0].date }}</strong>. Long sessions and short panel talks are both welcome.</p>
+    <p class="path__go"><a href="{{ '/participate/' | relative_url }}#present">Call for abstracts</a></p>
+  </li>
+  <li class="path">
+    <h2>Attend</h2>
+    <p>{{ c.weekday }}, {{ c.date }}, on the University of Idaho campus and around downtown Moscow. Registration includes lunch and the evening banquet.</p>
+    <p class="path__go"><a href="{{ '/participate/' | relative_url }}#attend">Register</a> · <a href="{{ '/join/' | relative_url }}">Getting here</a></p>
+  </li>
+  <li class="path">
+    <h2>Watch</h2>
+    <p>Sessions, keynotes, and abstracts from past conferences, and <em>Lookouts</em>, the journal that grew out of them.</p>
+    <p class="path__go"><a href="{{ '/archives/' | relative_url }}">Past sessions</a> · <a href="{{ '/proceedings/' | relative_url }}">Proceedings</a></p>
+  </li>
+</ul>
+
+{% include azimuth.html start=330 span=120 %}
+
+<p class="sponsors">Sponsored by the University of Idaho’s <a href="https://www.uidaho.edu/caa">College of Art and Architecture</a>, <a href="https://www.uidaho.edu/cogs">College of Graduate Studies</a>, <a href="https://www.uidaho.edu/cnr">College of Natural Resources</a>, and <a href="https://lib.uidaho.edu/">Library</a>, in partnership with the <a href="https://firelookout.org/">Forest Fire Lookout Association</a>. <a href="{{ c.program.url | relative_url }}">See the 2026 program (PDF)</a>.</p>

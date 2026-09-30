@@ -1,68 +1,61 @@
 ---
 layout: splash
 title: Archives
+aside: true
 permalink: /archives/
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.4"
   overlay_image: /assets/images/nilc2025-67.jpg
-excerpt: "Explore the diverse panels and sessions from our interdisciplinary lookout conferences"
+  overlay_filter: 0.25
+excerpt: "Sessions, recordings, and programs from past conferences."
+# One entry per conference, newest first. `sessions` names the
+# _data/sectionsYYYY.csv file; `collection` the matching nilcYYYY pages.
+editions:
+  - year: 2026
+    name: "Second National Interdisciplinary Lookout Conference"
+    program: /Booklet_Nilc2026.pdf
+  - year: 2025
+    name: "First National Interdisciplinary Lookout Conference"
+    theme: "The Past and Future of Fire Lookouts"
+    program: /Booklet_Nilc2025.pdf
+    sessions: sections2025
+    collection: nilc2025
+    summary: "The 2025 conference featured a series of panels, presentations, and lectures exploring various aspects of fire lookouts in the human environment. Its theme, *The Past and Future of Fire Lookouts*, focused on the history and the evolving role of fire lookout towers and related issues."
 ---
 
-# Past Conferences
+This page lists the sessions and links to content from past National Interdisciplinary Lookout Conferences, newest first.
+{: .lead}
 
-This page lists the sessions and links to content from past conferences. 
+{% for e in page.editions %}
+<section class="archive-year" markdown="0">
+  {% assign bearing = e.year | modulo: 36 | times: 10 %}
+  {% include azimuth.html start=bearing span=120 %}
+  <h2 id="nilc-{{ e.year }}">NILC {{ e.year }}</h2>
+  <p class="archive-year__meta">
+    <span>{{ e.name }}, University of Idaho</span>
+    {% if e.program %}<a href="{{ e.program | relative_url }}">Program (PDF)</a>{% endif %}
+  </p>
+  {% if e.theme %}<p>Theme: <em>{{ e.theme }}</em></p>{% endif %}
+  {% if e.summary %}{{ e.summary | markdownify }}{% endif %}
 
-## NILC 2025 
-
-<div class="notice notice--info">
-<p><strong>📖 Conference Booklet:</strong> <a href="{{ site.baseurl }}/Booklet_Nilc.pdf" target="_blank">Download the full NILC 2025 Conference Booklet (PDF)</a></p>
-</div>
-
-The 2025 National Interdisciplinary Lookout Conference featured a series of panels, presentations, and lectures exploring various aspects of fire lookouts in the human environment. The Theme for the conference was *“The Past and Future of Fire Lookouts,”* and content focused on exploring the history and the evolving role of fire lookout towers and related issues. 
-
-### Conference Sessions
-
-<div class="section-grid">
-{% assign sections = site.data.sections2025 %}
-{% for section in sections %}
-{% if section.id != 'id' %}
-{% assign section_url = '/nilc2025/' | append: section.id | append: '.html' %}
-<div class="section-card">
-<h3><a href="{{ section_url | relative_url }}">{{ section.title }}</a></h3>
-{% if section.chair and section.chair != "" %}
-  <p><strong>Chair:</strong> {{ section.chair }}</p>
-{% endif %}
-
-{% comment %}
-<!-- List presentations and presenters in this section -->
-{% endcomment %}
-{% assign section_presentations = site.data.nilc2025 | where: "parentid", section.id %}
-{% if section_presentations.size > 0 %}
-  <div class="presentation-list">
-    <p><strong>Presentations:</strong></p>
-    <ul style="margin-top: 0.25rem; font-size: 0.9em;">
-    {% for presentation in section_presentations %}
-      <li>
-        <strong>{{ presentation.speaker }}:</strong> {{ presentation.title }}
-      </li>
+  {% if e.sessions %}
+  {% assign talks_data = site.data[e.collection] %}
+  <ol class="sessions">
+    {% for s in site.data[e.sessions] %}
+    {% assign s_url = '/' | append: e.collection | append: '/' | append: s.id | append: '.html' %}
+    {% assign s_talks = talks_data | where: "parentid", s.id %}
+    <li class="session">
+      <h3 class="session__title"><a href="{{ s_url | relative_url }}">{{ s.title }}</a></h3>
+      {% if s.chair and s.chair != "" %}<p class="session__chair">Chair: {{ s.chair }}</p>{% endif %}
+      {% if s_talks.size > 0 %}
+      <ul class="session__talks">
+        {% for t in s_talks %}<li><span class="speaker">{{ t.speaker }}</span>, {{ t.title }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </li>
     {% endfor %}
-    </ul>
-  </div>
-{% endif %}
-
-<p><a href="{{ section_url | relative_url }}" class="btn btn--primary">View Details and Videos</a></p>
-</div>
-{% endif %}
+  </ol>
+  {% else %}
+  <p>Session recordings and abstracts from {{ e.year }} will be added here.</p>
+  {% endif %}
+</section>
 {% endfor %}
-</div>
-
----
-
-## Future Conferences
-
-*This page will be expanded to include sections from future National Interdisciplinary Lookout Conferences as they are held.*
-
-### Archive
-- **2025**: First National Interdisciplinary Lookout Conference - University of Idaho
-- **Future conferences will be listed here**

@@ -1,23 +1,17 @@
 ---
 layout: splash
-author_profile: true
+title: "Lookout Postcard Contest"
 header:
-  overlay_color: "#000"
   overlay_filter: "0.1"
   overlay_image: /assets/images/trinity_peak_keeping_watch.jpeg
-  # cta_label: "University of Idaho Applicants"
-  # cta_url: "https://uidaho.co1.qualtrics.com/jfe/form/SV_eLQjthbshmz3bNz"
-  # cta2_label: "Washington State University Applicants"
-  # cta2_url: "https://wsu.co1.qualtrics.com/jfe/form/SV_07ioTAKauWCC2X3"
-excerpt: " "
 permalink: "/postcard/"
 ---
 
-# Lookout Post Card Contest
 
 ## Call for Submissions: 2026 NILC Postcard Exhibition 
 
-You are invited to submit your original artworks to the 2026 NILC Postcard Exhibition
+You are invited to submit your original artworks to the 2026 NILC Postcard Exhibition.
+
 ---
 
 ### Key Information

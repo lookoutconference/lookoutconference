@@ -1,53 +1,79 @@
-{% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+{% comment %}
+  NILC hero. Front matter options (all under `header:`):
+    overlay_image   photo used as the cover
+    overlay_filter  0–1 strength of the uniform ink veil (default 0.15)
+    position        CSS background-position, e.g. "center bottom"
+    logo            render this image on paper instead of a photo, with no text
+    logo_alt        alt text for the logo (required with `logo`)
+    image           Minimal Mistakes' plain header image (no overlay), with
+                    image_description as alt text
+    hide_title      true = keep the h1 for screen readers only
+    kicker          short label above the title
+    size            "tall" for the home page
+    align           "top" puts the title at the top, keeping the image's lower edge clear
+    conference      true = kicker and lead from _data/conference.yml
+    caption         photo credit, bottom right
+  Include parameters (used by layouts, override front matter):
+    image, title, lead, kicker
+{% endcomment %}
 
-{% if page.header.overlay_filter contains "gradient" %}
-  {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
-{% elsif page.header.overlay_filter contains "rgba" %}
-  {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
-  {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
-{% elsif page.header.overlay_filter %}
-  {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
-  {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
+{% assign hero_image = include.image | default: page.header.overlay_image %}
+{% assign hero_title = include.title | default: page.title | default: site.title %}
+{% assign hero_kicker = include.kicker | default: page.header.kicker %}
+{% if page.header.conference %}
+  {% assign c = site.data.conference %}
+  {% capture hero_kicker %}{{ c.edition }} conference · {{ c.date }} · {{ c.place }}{% endcapture %}
+  {% capture hero_lead %}{{ c.year }} theme: <strong>{{ c.theme }}</strong>. {{ c.theme_subtitle }}.{% endcapture %}
+{% elsif include.lead %}
+  {% assign hero_lead = include.lead %}
+{% elsif page.tagline %}
+  {% assign hero_lead = page.tagline | markdownify | remove: "<p>" | remove: "</p>" %}
+{% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
+  {% assign hero_lead = page.excerpt | markdownify | remove: "<p>" | remove: "</p>" %}
 {% endif %}
 
-{% if page.header.image_description %}
-  {% assign image_description = page.header.image_description %}
-{% else %}
-  {% assign image_description = page.title %}
-{% endif %}
+{% if page.header.image and page.header.overlay_image == nil and include.image == nil %}
 
-{% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
-
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
-  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
->
-  {% if page.header.overlay_color or page.header.overlay_image %}
-    <div class="wrapper">
-      <h1 id="page-title" class="page__title" itemprop="headline">
-        {% if paginator and site.paginate_show_page_num %}
-          {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
-        {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
-        {% endif %}
-      </h1>
-      {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
-      {% include page__meta.html %}
-      {% if page.header.actions %}
-        <p>
-        {% for action in page.header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
-        {% endfor %}
-        </p>
-      {% endif %}
-    </div>
-  {% else %}
-    <img src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
-  {% endif %}
+{% assign image_description = page.header.image_description | default: hero_title | markdownify | strip_html | strip_newlines | escape_once %}
+<div class="page__hero">
+  <img src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
   {% endif %}
 </div>
+
+{% elsif page.header.logo %}
+
+<header class="hero hero--logo">
+  <div class="hero__inner">
+    <h1 id="page-title" class="visually-hidden" itemprop="headline">{{ hero_title }}</h1>
+    <img class="hero__logo" src="{{ page.header.logo | relative_url }}" alt="{{ page.header.logo_alt | default: hero_title | escape }}">
+  </div>
+</header>
+
+{% else %}
+
+{% assign hero_veil = page.header.overlay_filter | default: 0.15 %}
+<header class="hero{% if page.header.size %} hero--{{ page.header.size }}{% endif %}{% if page.header.align == "top" %} hero--top{% endif %}"
+  style="--hero-image: url('{{ hero_image | relative_url }}'); --hero-veil: {{ hero_veil }};{% if page.header.position %} --hero-position: {{ page.header.position }};{% endif %}">
+  <div class="hero__inner">
+    {% if hero_kicker %}<p class="hero__kicker">{{ hero_kicker }}</p>{% endif %}
+    <h1 id="page-title" class="hero__title{% if page.header.hide_title %} visually-hidden{% endif %}" itemprop="headline">{{ hero_title }}</h1>
+    {% assign hero_lead = hero_lead | strip %}
+    {% if hero_lead != "" and hero_lead != nil and page.header.hide_title != true %}
+      <p class="hero__lead">{{ hero_lead }}</p>
+    {% endif %}
+    {% if page.header.actions %}
+      <p class="hero__actions">
+      {% for action in page.header.actions %}
+        <a href="{{ action.url | relative_url }}" class="btn btn--on-photo{% if forloop.first %} btn--on-photo-solid{% endif %}">{{ action.label }}</a>
+      {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+  {% if page.header.caption %}
+    <span class="hero__caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
+</header>
+
+{% endif %}
