@@ -5,6 +5,8 @@
     position        CSS background-position, e.g. "center bottom"
     logo            render this image on paper instead of a photo, with no text
     logo_alt        alt text for the logo (required with `logo`)
+    image           Minimal Mistakes' plain header image (no overlay), with
+                    image_description as alt text
     hide_title      true = keep the h1 for screen readers only
     kicker          short label above the title
     size            "tall" for the home page
@@ -30,7 +32,17 @@
   {% assign hero_lead = page.excerpt | markdownify | remove: "<p>" | remove: "</p>" %}
 {% endif %}
 
-{% if page.header.logo %}
+{% if page.header.image and page.header.overlay_image == nil and include.image == nil %}
+
+{% assign image_description = page.header.image_description | default: hero_title | markdownify | strip_html | strip_newlines | escape_once %}
+<div class="page__hero">
+  <img src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
+  {% if page.header.caption %}
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
+</div>
+
+{% elsif page.header.logo %}
 
 <header class="hero hero--logo">
   <div class="hero__inner">
