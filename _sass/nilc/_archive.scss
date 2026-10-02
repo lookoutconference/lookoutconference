@@ -254,6 +254,59 @@
   }
 }
 
+// This year's announcements, set on the same grid as the paths below
+// (one continuous ruled list, so drop the second list's heavy top rule)
+.paths--news + .paths {
+  border-top: 0;
+}
+
+.keynote {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md) var(--space-lg);
+
+  p {
+    margin: 0;
+  }
+}
+
+.keynote__portrait,
+.page__content .keynote__portrait {
+  flex: none;
+  width: 6.5rem;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+
+  @media (min-width: 40em) {
+    width: 8rem;
+  }
+}
+
+.path__figure,
+.page__content .path__figure {
+  display: block;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  figcaption {
+    margin: var(--space-xs) 0 0;
+    padding: 0;
+    font-family: var(--font-display);
+    font-stretch: 87.5%;
+    font-size: var(--step--1);
+    color: var(--ink-2);
+  }
+}
+
 .sponsors {
   margin-top: var(--space-2xl);
   font-size: var(--step--1);

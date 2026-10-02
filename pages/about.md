@@ -63,6 +63,15 @@ A full conference schedule will be posted in late-February 2027 once presentatio
 * <a href="https://www.uidaho.edu/news/feature-stories/fire-lookouts">Michael Decker</a> (College of Graduate Studies - University of Idaho)
 * <a href="https://www.uidaho.edu/caa/programs/architecture/ourpeople/andrea-dutto">Andrea Alberto Dutto</a> (College of Art and Architecture)
 
-See the full [conference board](../board/).
+## Conference Board
+
+<ul class="people">
+  <li><span class="people__name">Andrea Alberto Dutto</span> <span class="people__org">University of Idaho</span></li>
+  <li><span class="people__name">Billy Cooter</span> <span class="people__org">Idaho Fire Lookouts</span></li>
+  <li><span class="people__name">Cat House</span> <span class="people__org">Idaho Fire Lookouts</span></li>
+  <li><span class="people__name">Gary Weber</span> <span class="people__org">Forest Fire Lookout Association</span></li>
+  <li><span class="people__name">Michael Decker</span> <span class="people__org">University of Idaho</span></li>
+  <li><span class="people__name">Mike Guerin</span> <span class="people__org">Forest Fire Lookout Association</span></li>
+</ul>
 
 [Submit a question]({{ c.links.questions }}){: .btn .btn--primary}

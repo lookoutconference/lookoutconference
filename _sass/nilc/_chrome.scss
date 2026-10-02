@@ -53,7 +53,7 @@
   }
 
   .site-title__full {
-    display: none;
+    display: block;
     padding-inline-start: var(--space-sm);
     border-inline-start: 1px solid var(--rule);
     font-size: 0.7rem;
@@ -61,16 +61,12 @@
     line-height: 1.25;
     letter-spacing: 0.02em;
     color: var(--ink-2);
-
-    @media (min-width: 90em) {
-      display: block;
-    }
   }
 
   .visible-links a,
   .hidden-links a {
     font-stretch: 87.5%;
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -88,7 +84,7 @@
 
   // Hover and current page: a short run of scale ticks
   .visible-links a {
-    padding-block: 0.4rem;
+    padding-block: 0.6rem;
 
     &::before {
       height: 5px;
@@ -116,7 +112,7 @@
 
     a {
       margin: 0;
-      padding: var(--space-sm) var(--space-md);
+      padding: var(--space-md) var(--space-lg);
     }
 
     li {
@@ -128,6 +124,147 @@
   .navicon::before,
   .navicon::after {
     background: var(--ink);
+  }
+}
+
+/* Side nav: below 772px every link lives in a drawer instead of the
+   greedy-nav mix of inline links plus overflow menu. The inline links stay
+   in the layout tree (just invisible) so greedy-nav can still measure them
+   for when the window widens again. */
+
+.side-nav__open {
+  display: none;
+  align-self: center;
+  margin-inline-start: auto;
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 771.98px) {
+  .js .greedy-nav {
+    .visible-links {
+      position: absolute;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .greedy-nav__toggle,
+    .hidden-links {
+      display: none !important;
+    }
+  }
+
+  .js .side-nav__open {
+    display: block;
+  }
+}
+
+.side-nav {
+  margin: 0 0 0 auto;
+  padding: 0;
+  width: min(20rem, 85vw);
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  border-inline-start: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+
+  &::backdrop {
+    background: oklch(23% 0.015 70 / 0.45);
+  }
+
+  &[open] {
+    animation: side-nav-in 0.35s var(--ease-out);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &[open] {
+      animation: none;
+    }
+  }
+}
+
+@keyframes side-nav-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.side-nav__inner {
+  min-height: 100%;
+  padding: var(--space-sm) var(--gutter) var(--space-xl);
+}
+
+.side-nav__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--ink);
+}
+
+.side-nav__label {
+  font-stretch: 87.5%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.side-nav__close {
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-inline-end: calc(-1 * var(--space-sm));
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.side-nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  a {
+    display: block;
+    padding: var(--space-md) 0;
+    font-stretch: 87.5%;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink-2);
+
+    &:visited {
+      color: var(--ink-2);
+    }
+
+    &:hover {
+      color: var(--ink);
+    }
+
+    &[aria-current="page"] {
+      color: var(--ink);
+      box-shadow: inset 3px 0 0 var(--ember);
+      padding-inline-start: var(--space-sm);
+    }
   }
 }
 
